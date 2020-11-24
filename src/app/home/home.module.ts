@@ -6,13 +6,23 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { AutosizeModule } from "ngx-autosize";
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HomePage
+      }
+    ]),
+    AutosizeModule
   ],
   declarations: [HomePage]
 })
